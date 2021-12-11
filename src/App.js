@@ -1,51 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <>
-      <nav ClassName="navbar navbar-expand-lg navbar-light bg-light">
-        <div ClassName="container-fluid">
-          <a ClassName="navbar-brand" href="#">Navbar</a>
-          <button ClassName="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span ClassName="navbar-toggler-icon"></span>
-          </button>
-          <div ClassName="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul ClassName="navbar-nav me-auto mb-2 mb-lg-0">
-              <li ClassName="nav-item">
-                <a ClassName="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li ClassName="nav-item">
-                <a ClassName="nav-link" href="#">Link</a>
-              </li>
-              <li ClassName="nav-item dropdown">
-                <a ClassName="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul ClassName
-                  ="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a ClassName
-                    ="dropdown-item" href="#">Action</a></li>
-                  <li><a ClassName
-                    ="dropdown-item" href="#">Another action</a></li>
-                  <li><hr ClassName
-                    ="dropdown-divider" /></li>
-                  <li><a ClassName
-                    ="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li ClassName="nav-item">
-                <a ClassName="nav-link disabled">Disabled</a>
-              </li>
-            </ul>
-            <form ClassName="d-flex">
-              <input ClassName="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button ClassName="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
-    </>
+    <Navbar bg="light" expand="lg">
+  <Container>
+    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="me-auto">
+        <Nav.Link href="#home">Home</Nav.Link>
+        <Nav.Link href="#link">Link</Nav.Link>
+        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+          <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+          <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+          <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+          <NavDropdown.Divider />
+          <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+        </NavDropdown>
+      </Nav>
+    </Navbar.Collapse>
+  </Container>
+</Navbar>
   );
 }
 
